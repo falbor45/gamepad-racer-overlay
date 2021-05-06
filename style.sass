@@ -1,0 +1,74 @@
+$reader-background: rgba(0, 0, 0, 0.38)
+$horizontal-arrow-color: rgba(255, 255, 0, 0.38)
+$gas-arrow-color: rgba(0, 255, 0, 0.38)
+$brake-arrow-color: rgba(255, 0, 0, 0.38)
+
+.reader-container
+  position: relative
+  width: 800px
+  height: 800px
+
+.reader-up-arrow
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 50%
+  background-color: $reader-background
+  clip-path: polygon(50% 0, 60% 20%, 60% calc(100% - 4px), 40% calc(100% - 4px), 40% 20%)
+  .reader-up-arrow-fill
+    position: absolute
+    bottom: 0
+    left: 0
+    background-color: $gas-arrow-color
+    width: 100%
+    height: 0
+
+.reader-right-arrow
+  position: absolute
+  top: 10%
+  left: calc(60% + 8px)
+  width: calc(40% - 8px)
+  height: 80%
+  background-color: $reader-background
+  clip-path: polygon(0 8px, calc(100% - 8px) 50%, 0 calc(100% - 8px))
+  .reader-right-arrow-fill
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $horizontal-arrow-color
+    height: 100%
+    width: 0
+
+.reader-down-arrow
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 50%
+  background-color: $reader-background
+  clip-path: polygon(50% 100%, 60% 80%, 60% 4px, 40% 4px, 40% 80%)
+  .reader-down-arrow-fill
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $brake-arrow-color
+    height: 0
+    width: 100%
+
+.reader-left-arrow
+  position: absolute
+  top: 10%
+  right: calc(60% + 8px)
+  width: calc(40% - 8px)
+  height: 80%
+  background-color: $reader-background
+  clip-path: polygon(100% 8px, 8px 50%, 100% calc(100% - 8px))
+  .reader-left-arrow-fill
+    position: absolute
+    top: 0
+    right: 0
+    background-color: $horizontal-arrow-color
+    height: 100%
+    width: 0
+
